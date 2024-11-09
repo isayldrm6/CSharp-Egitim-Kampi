@@ -1,1 +1,1 @@
-# 📢 Proje 1: Merhaba Dünya!
+# :fire: Proje 1: Merhaba Dünya!
