@@ -15,7 +15,8 @@ Bu projede, foreach döngüsünün nasıl kullanıldığını öğrendim. Basit 
 # :fire: Proje 8 > Methods
 Bu projede, kodlarımı daha düzenli ve tekrar kullanılabilmek için metot oluşturmayı öğrendim. Parametre alarak işlem yapan ve sonuç döndüren metotlar yazmayı denedim.
 # :fire: Proje 9 > Entity Framework
-![aa](https://github.com/user-attachments/assets/92f98d5a-8879-4f8f-b9d3-07ce09a0a3ad)
-  Bu projede, Entity Framework kullanarak veri tabanındaki bilgilerle bi uygulama geliştirdik.
+![aa](https://github.com/user-attachments/assets/92f98d5a-8879-4f8f-b9d3-07ce09a0a3ad)                           
+Bu projede, Entity Framework kullanarak veri tabanındaki bilgilerle bi uygulama geliştirdik.
+
 
 
