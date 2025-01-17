@@ -258,3 +258,4 @@ Kullanıcıya sunulan veriler daha anlamlı hale getirilmiş, proje kodunun okun
 ### 🏦 Bank Transactions (Banka Hareketleri Formu)
 ---
 ## Proje Görüntüleri 📸
+![Login Fotoğrafı](C:\Users\isa_0\OneDrive\Masaüstü\FinacialCrm)
