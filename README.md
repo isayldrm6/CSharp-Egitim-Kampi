@@ -258,4 +258,16 @@ Kullanıcıya sunulan veriler daha anlamlı hale getirilmiş, proje kodunun okun
 ### 🏦 Bank Transactions (Banka Hareketleri Formu)
 ---
 ## Proje Görüntüleri 📸
-![Login Fotoğrafı](C:\Users\isa_0\OneDrive\Masaüstü\FinacialCrm\login.png)
+![login](https://github.com/user-attachments/assets/1b31d165-306a-4d0c-89bb-6e816af57a41)
+![banks](https://github.com/user-attachments/assets/beff595a-7113-41c9-a061-bbdc6cd0a09c)
+![Dashboard](https://github.com/user-attachments/assets/7aded7df-25d1-400e-b45b-1bca53b8b4e8)
+![category](https://github.com/user-attachments/assets/c963043e-118c-4cc7-82ee-2574acf61806)
+![Billing](https://github.com/user-attachments/assets/3d67eb47-8939-42ff-b02f-b2a28226de06)
+![BanksMovements](https://github.com/user-attachments/assets/57c4b527-4254-4337-933f-55824fde54b3)
+![Spending](https://github.com/user-attachments/assets/30f504d6-fec0-440f-b76a-ead41cab7838)
+![settings](https://github.com/user-attachments/assets/709e49fe-d415-41b5-bbcc-bc73a71dda35)
+
+
+
+
+
