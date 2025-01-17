@@ -71,25 +71,34 @@ Category (Kategori) entity’si için bir form oluşturduk. Bu form üzerinde a�
 - ID’ye Göre Getirme: Belirli bir ID’ye sahip kategori bilgisi getirildi.
 Bu işlemleri Entity Framework ve Manager sınıfları üzerinden gerçekleştirdik. Ayrıca, formda yapılan işlemlerin iş katmanında tanımlı validasyonlarla kontrol edilmesini sağladık.
 # :fire: Proje 21 > Entity'e Özgü Metot Yazmak
-Projede Ürünler (Products) için bir form tasarladık ve listeleme işlemlerini gerçekleştirdik. Ancak, ürünlerin listelenmesi sırasında yalnızca CategoryId göründüğünden, bu durumu kullanıcı dostu bir hale getirmek için çözüm geliştirdik.
-Yapılan Çalışmalar
-1. GetProductsWithCategory Metodu
-- Amacı: Ürünlerin bağlı olduğu kategori adını görüntülemek.
-- Uygulama:
-Product entity'sine özel bir GetProductsWithCategory metodu tanımladık. Bu metod, ürünlerin kategori bilgilerini de içeren bir liste döndürdü.
-2. ProductWithCategoryDTO Sınıfı
-- Amacı: Veritabanından dönen verileri kullanıcıya daha anlamlı bir şekilde sunmak.
-- Uygulama:
--- DTO (Data Transfer Object) tasarımıyla, ürün bilgilerini ve kategori adını içeren bir veri yapısı oluşturduk.
--- Listeleme işlemleri sırasında bu DTO sınıfını kullandık.
-3. Kullanıcı Dostu Listeleme
+Bu projede, **Ürünler (Products)** için bir form tasarladık ve listeleme işlemlerini gerçekleştirdik. Ancak, ürünlerin listelenmesi sırasında yalnızca `CategoryId` göründüğünden, kullanıcı deneyimini iyileştirmek için bir çözüm geliştirdik.
 
-CategoryId yerine, ürünlerin bağlı olduğu kategori adını kullanıcıya gösterdik.
-Bu, kullanıcıların verileri daha kolay anlamasını ve işlemleri daha hızlı gerçekleştirmesini sağladı.
-Katmanlı Mimari ve Esneklik
-Bu yapı sayesinde, katmanlı mimaride entity'lere özel işlemler için esnek bir altyapı oluşturuldu.
-DTO kullanımı, farklı veri ihtiyaçlarına yönelik özelleştirilmiş çözümler geliştirme imkânı sundu.
-💡 Sonuç: Kullanıcıya sunulan veriler daha anlamlı hale gelirken, proje kodunun okunabilirliği ve genişletilebilirliği artırıldı. 🛠️
+## Yapılan Çalışmalar  
+
+### 1. `GetProductsWithCategory` Metodu  
+- **Amacı:** Ürünlerin bağlı olduğu kategori adını listeleme sırasında göstermek.  
+- **Uygulama:**  
+  - `Product` entity'sine özel bir `GetProductsWithCategory` metodu yazıldı.  
+  - Bu metod, ürünlerin kategori bilgilerini içeren bir liste döndürdü.  
+
+### 2. `ProductWithCategoryDTO` Sınıfı  
+- **Amacı:** Veritabanından dönen verileri daha anlamlı bir şekilde kullanıcıya sunmak.  
+- **Uygulama:**  
+  - DTO (Data Transfer Object) tasarımıyla, ürün bilgilerini ve kategori adını içeren bir yapı oluşturuldu.  
+  - Listeleme işlemlerinde bu DTO sınıfı kullanılarak, kullanıcıya `CategoryId` yerine kategori adı gösterildi.  
+
+### 3. Kullanıcı Dostu Listeleme  
+- Ürünlerin bağlı olduğu kategori adını, `CategoryId` yerine kullanıcıya gösterdik.  
+- Bu sayede, kullanıcıların verileri daha kolay anlaması ve işlemleri daha hızlı gerçekleştirmesi sağlandı.
+
+## Katmanlı Mimari ve Esneklik  
+- **Katmanlı mimari** sayesinde, entity'lere özel işlemler için esnek bir altyapı oluşturuldu.  
+- **DTO kullanımı**, farklı veri ihtiyaçlarına yönelik özelleştirilmiş çözümler geliştirme imkânı sundu.  
+
+---
+
+💡 **Sonuç:**  
+Kullanıcıya sunulan veriler daha anlamlı hale getirilmiş, proje kodunun okunabilirliği ve genişletilebilirliği artırılmıştır.  
 # :fire: Proje 22 > C# ile Dapper Kullanımı
 # :fire: Proje 23 > Dapper İşlemlerinin Tamamlanması
 
