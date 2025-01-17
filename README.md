@@ -50,26 +50,28 @@ BusinessLayer içerisinde Abstract ve Concrete adında iki klasör oluşturduk.
 - Concrete klasöründe ise Abstract klasöründe tanımlanan arayüzlerin her biri için birer Manager sınıfı oluşturduk. Bu sınıflar, ilgili arayüzlerden kalıtım aldı.
 Daha sonra Dependency Injection kullanarak, her bir Manager sınıfının constructor metodu aracılığıyla gerekli veritabanı atamalarını gerçekleştirdik. Bu Manager sınıflarını, Entity Framework'ün yöntemlerinden yararlanarak doldurduk. Ayrıca, BusinessLayer'ın validasyon işlemleri için kullanıldığını ve oluşturduğumuz Manager sınıfları üzerinden bu validasyon işlemlerini nasıl yapabileceğimizi öğrendik. 
 # :fire: Proje 20 > Dependency Injection (Bağımlılık Enjeksiyonu)
-Projede Dependency Injection (DI) kavramını inceledik. DI, bir sınıfın ihtiyaç duyduğu bağımlılıkları dışarıdan almasını sağlayan bir tasarım deseni olarak tanımlanabilir. Bu yöntemle, projelerde bağımlılıkların yönetimi kolaylaştırılır ve kodun test edilebilirliği, yeniden kullanılabilirliği artırılır.
-Dependency Injection (DI) Nedir ve Neden Kullanılır?
-- Nedir?
-Bir sınıfın ihtiyaç duyduğu nesneleri doğrudan oluşturmak yerine, dışarıdan almasını sağlar. Bu, sınıflar arasındaki sıkı bağımlılığı ortadan kaldırır.
-Neden Kullanılır?
-- Bağımlılıkları Yönetmek: Kodun modüler ve daha az bağımlı olmasını sağlar.
-- Test Edilebilirlik: Mock nesneleri kolayca enjekte edebilme imkânı sunar.
-- Yeniden Kullanılabilirlik: Bir bileşeni farklı bağlamlarda kolayca kullanabilirsiniz.
-Constructor Metodu
-Projemizde constructor metodu kullanılarak, bir sınıfa ihtiyaç duyduğu bağımlılıkları sağladık. Constructor, sınıfın bir nesnesi oluşturulurken çağrılan özel bir metottur. Projede bu metodun kullanımını şu şekilde gerçekleştirdik:
-- Amaç: Form oluşturulurken, ilgili servisin çağrılmasını ve gerekli sınıfların enjekte edilmesini sağlamak.
-- Uygulama: Örneğin, EfCategoryDal sınıfını manuel olarak enjekte ettik ve bu sayede CategoryService üzerinden ilgili işlemleri gerçekleştirdik.
-Kategori Formu İşlemleri
-Category (Kategori) entity’si için bir form oluşturduk. Bu form üzerinde aşağıdaki işlemleri gerçekleştirdik:
-- Veri Ekleme: Yeni kategori bilgileri girilerek veritabanına kaydedildi.
-- Veri Silme: Seçilen kategori bilgileri silindi.
-- Veri Güncelleme: Mevcut kategori bilgileri üzerinde düzenlemeler yapılarak güncellendi.
-- Veri Listeleme: Kayıtlı tüm kategoriler form üzerinde listelendi.
-- ID’ye Göre Getirme: Belirli bir ID’ye sahip kategori bilgisi getirildi.
-Bu işlemleri Entity Framework ve Manager sınıfları üzerinden gerçekleştirdik. Ayrıca, formda yapılan işlemlerin iş katmanında tanımlı validasyonlarla kontrol edilmesini sağladık.
+## Dependency Injection (DI) Nedir?  
+DI, bir sınıfın ihtiyaç duyduğu bağımlılıkları dışarıdan almasını sağlayan bir tasarım desenidir. Bu yöntem, projelerde bağımlılık yönetimini kolaylaştırır ve kodun test edilebilirliği ile yeniden kullanılabilirliğini artırır.  
+
+### Neden Kullanılır?  
+- **Bağımlılıkları Yönetmek:** Kodun modüler ve daha az bağımlı olmasını sağlar.  
+- **Test Edilebilirlik:** Mock nesneler kolayca enjekte edilebilir.  
+- **Yeniden Kullanılabilirlik:** Bileşenler farklı bağlamlarda kolayca kullanılabilir.  
+
+## Constructor Metodu  
+Projede, constructor metodu kullanılarak bağımlılıklar enjekte edildi.  
+- **Amaç:** Form oluşturulurken ilgili servisi çağırmak ve gerekli sınıfları enjekte etmek.  
+- **Uygulama:** `EfCategoryDal` sınıfını manuel olarak enjekte ederek `CategoryService` üzerinden işlemleri gerçekleştirdik.  
+
+## Kategori Formu İşlemleri  
+**Category (Kategori)** entity’si için bir form oluşturduk ve şu işlemleri gerçekleştirdik:  
+- **Veri Ekleme:** Yeni kategori bilgilerini veritabanına kaydettik.  
+- **Veri Silme:** Seçilen kategori bilgilerini sildik.  
+- **Veri Güncelleme:** Mevcut bilgileri düzenleyerek güncelledik.  
+- **Veri Listeleme:** Kayıtlı tüm kategorileri listeledik.  
+- **ID’ye Göre Getirme:** Belirli bir ID’ye sahip kategori bilgilerini aldık.  
+
+Bu işlemler **Entity Framework** ve `Manager` sınıfları kullanılarak gerçekleştirildi. Ayrıca, validasyonlar iş katmanında tanımlandı ve form işlemleri sırasında devreye alındı. 
 # :fire: Proje 21 > Entity'e Özgü Metot Yazmak
 Bu projede, **Ürünler (Products)** için bir form tasarladık ve listeleme işlemlerini gerçekleştirdik. Ancak, ürünlerin listelenmesi sırasında yalnızca `CategoryId` göründüğünden, kullanıcı deneyimini iyileştirmek için bir çözüm geliştirdik.
 
@@ -100,7 +102,13 @@ Bu projede, **Ürünler (Products)** için bir form tasarladık ve listeleme iş
 💡 **Sonuç:**  
 Kullanıcıya sunulan veriler daha anlamlı hale getirilmiş, proje kodunun okunabilirliği ve genişletilebilirliği artırılmıştır.  
 # :fire: Proje 22 > C# ile Dapper Kullanımı
-# :fire: Proje 23 > Dapper İşlemlerinin Tamamlanması
+# :fire: Proje 24 > C# ile MongoDB Kullanımı 1
+# :fire: Proje 25 > C# ile MongoDB Kullanımı 2
+# :fire: Proje 26 > C# ile PostgreSQL Kullanımı 1
+# :fire: Proje 27 > C# ile PostgreSQL Kullanımı 2
+# :fire: Proje 28 > Finansal CRM Uygulaması 1
+# :fire: Proje 23 > Finansal CRM Uygulaması 2
+# :fire: Proje 23 > Finansal CRM Uygulaması 3 - Final
 
 
 
