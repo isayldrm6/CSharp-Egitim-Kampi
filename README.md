@@ -1,3 +1,4 @@
+# 🚀 C# EĞİTİM KAMPI PROJELERİ
 # :fire: Proje 1 > Hello World!
 Bu projede, temel yazdırma işlemlerini öğrendim. Int ve string değikenlerinin nasıl ve ne amaçla kullanıldığını öğrendim.
 # :fire: Proje 2 > Variables
